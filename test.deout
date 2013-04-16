@@ -1,0 +1,83 @@
+tail:
+    push    {r7, lr}
+    sub     sp, sp, #0
+    mov     r7, sp
+    ldr     r0, [r7, #20]     //n
+    push    {r0}
+    ldr     r0, [r7, #8]     //begin
+    pop     {r1}
+    cmp     r0, r1
+//    [r0==r0]
+    bne     .L0
+    ldr     r0, [r7, #16]     //b1
+    push    {r0}
+    ldr     r0, [r7, #12]     //b2
+    pop     {r1}
+    add     r0, r1, r0
+//    [r0+r0]
+    b       .L1
+.L0:
+    ldr     r0, [r7, #20]     //n
+    push    {r0}
+    ldr     r0, [r7, #12]     //b2
+    push    {r0}
+    ldr     r0, [r7, #16]     //b1
+    push    {r0}
+    ldr     r0, [r7, #12]     //b2
+    pop     {r1}
+    add     r0, r1, r0
+//    [r0+r0]
+    push    {r0}
+    ldr     r0, [r7, #8]     //begin
+    push    {r0}
+    mov     r0, #1
+    pop     {r1}
+    add     r1, r0
+    mov     r0, r1
+//    [r0+1]
+    push    {r0}
+    bl      tail
+    add     sp, sp, #16
+.L1:
+    mov     sp, r7
+    add     sp, sp, #0
+    pop     {r7, pc}
+fib:
+    push    {r7, lr}
+    sub     sp, sp, #0
+    mov     r7, sp
+    ldr     r0, [r7, #8]     //x
+    push    {r0}
+    mov     r0, #2
+    pop     {r1}
+    cmp     r1, #2
+//    [r0>2]
+    ble     .L2
+    ldr     r0, [r7, #8]     //x
+    push    {r0}
+    mov     r0, #1
+    push    {r0}
+    mov     r0, #1
+    push    {r0}
+    mov     r0, #3
+    push    {r0}
+    bl      tail
+    add     sp, sp, #16
+    b       .L3
+.L2:
+    mov     r0, #1
+.L3:
+    mov     sp, r7
+    add     sp, sp, #0
+    pop     {r7, pc}
+main:
+    push    {r7, lr}
+    sub     sp, sp, #0
+    mov     r7, sp
+    mov     r0, #100
+    push    {r0}
+    bl      fib
+    add     sp, sp, #4
+    mov     sp, r7
+    add     sp, sp, #0
+    pop     {r7, pc}

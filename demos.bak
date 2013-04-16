@@ -1,0 +1,276 @@
+demo1 = '''
+    function main(){
+        a=2;b=3;
+        { 
+            t=a;
+            a=b;
+            b=t;
+        }
+        return b;
+    } 
+'''
+demo2='''
+function fun(a,b,c,d,e,f,g,h,i,j,k,l,m,n){
+    return a-c;
+}
+function test(a,b,c,d,e,f,g,h,i,j,k,l,m,n){
+    return fun(a,b,c,d,e,f,g,h,i,j,k,l,m,n);
+}
+function main()
+{
+     a=10;
+     b=20; 
+    return test(a,b,1,2,3,4,5,6,7,8,9,0,1,2);
+    }
+'''
+demo3='''
+function tail(n,b1,b2,begin){ 
+    if (n == begin){ return b1 + b2;} 
+    else { return tail(n, b2, b1 + b2, begin + 1);}
+}
+function fib(x){
+    if (x>2){
+        return tail(x, 1, 1, 3); 
+    }else{
+        return 1;
+    }
+}
+function main(){
+    return fib(100);
+}
+''' 
+demo4 = '''
+function fib(n) {
+  if (n > 2) { 
+  return fib(n - 2) + fib(n - 1);
+  }else{
+  return n;
+  }
+}
+function main(){ 
+    return fib(20);
+}
+'''
+demo5 = '''
+function fib(x,y) {
+
+   return x+y+3;
+}
+function main(){ 
+    x=7;y=4;
+    return x*x+y+fib(2,3)*2+3*5;
+}
+'''
+demo6 = '''
+function arr(x,n){
+    t=x;
+    t=t+n*4; 
+    return t;
+}
+function swap(a,b){ 
+    t=0;
+    a=a+20;b=b+20;
+    t=>a;>a=>b;>b=t;
+    return 0;
+}
+function main(){
+    a=1;b=2;c=3;d=4;e=5;f=6;g=7; 
+    f=swap(<b,<d);
+    return b;
+}
+'''  
+demo7 = '''
+function main(){
+    x=10;y=7; 
+    if(<y>9){
+        x=7;
+        }
+        return x;
+}
+'''
+demo8 = '''  
+function swap(a,b,off2){  
+    off3=(@+$+2)*4;  
+    m=>a;n=>b;   
+    m=m+off3;n=n+off3;  
+    m=>m;n=>n;
+    m=m+off2+off3;n=n+off2+off3; 
+    t=>m;>m=>n;>n=t; 
+
+}
+function s2(a,b){   
+    off2=(@+$+2)*4; 
+    swap(<a,<b,off2);
+}
+function s(a,b){  
+    s2(<a,<b);
+}
+function main(){
+    a=1;b=2; 
+    c=3;d=4; 
+    e=5;f=6; 
+    g=7;h=8; 
+    i=9;j=10; 
+    s(<a,<b);
+    return b;
+}
+'''  
+demo9 = ''' 
+function s2(a,b){ 
+
+    off3=(@+$+2)*4; 
+       
+    m=>a;n=>b;  
+    
+    m=m+off3;n=n+off3; 
+    
+    t=>m;>m=>n;>n=t;
+
+}
+function s(a,b){  
+    s2(<a,<b);
+}
+function main(){
+    a=1;b=2; 
+    c=3;d=4; 
+    e=5;f=6; 
+    g=7;h=8; 
+    i=9;j=10; 
+    s(<a,<b);
+    return b;
+}
+'''  
+demo10 = ''' 
+function swap(a,b,off){   
+    m=>a+off;n=>b+off; 
+    t=>m;>m=>n;>n=t;
+    return 0;
+} 
+function s2(a,b,off){ 
+    m=>a+off;n=>b+off; 
+    swap(<m,<n,(@+$+2)*4);
+}
+function s(a,b){
+    m=a;n=b; 
+    s2(<m,<n,(@+$+2)*4);
+}
+function main(){
+    a=1;b=2; 
+    c=3;d=4; 
+    e=5;f=6; 
+    g=7;h=8; 
+    i=9;j=10; 
+    s(<a,<b);
+    return b;
+}
+'''  
+demo11 = ''' 
+function swap(a,b,c){  
+    a=>a+24;b=>b+24; 
+    t=>a;>a=>b;>b=t;
+    return 0;
+} 
+function s(a,b){
+    
+    m=a;n=b; 
+    swap(<m,<n,3);
+}
+function main(){
+    a=1;b=2; 
+    c=3;d=4; 
+    e=5;f=6; 
+    g=7;h=8; 
+    i=9;j=10; 
+    s(<a,<b);
+    return b;
+}
+'''  
+demo12 = ''' 
+function arr(a,n,x){
+    t=a+n*4;
+    >t=x; 
+} 
+function main(){
+    a=1;b=2;c=3;d=4;e=5;f=6;g=7;  
+    arr(<a,3,15) ;
+    return d;
+}
+    '''
+demo13 = ''' 
+function arr(a,n,x){
+    t=a+n*4;
+    >t=x;
+    return >t;
+} 
+function main(){
+    a=1;b=2;c=3;d=4;e=5;f=6;g=7;   
+    return arr(<a,3,15);
+}
+'''  
+demo14 = ''' 
+function arr(a,n){
+    t=a+n*4;
+    return >t;
+} 
+function main(){
+    a=1;b=2;c=3;d=4;e=5;f=6;g=7;   
+    return arr(<a,3);
+}
+'''  
+demo15 = ''' 
+function swap(a,b,c,d){  
+    t=>a;>a=>b;>b=t;
+    return 0;
+} 
+function main(){
+    a=1;b=2;c=3;d=4;e=5;f=6;g=7;  
+    swap(<e,<g,c,d);
+    return e;
+}
+'''  
+demo16 = '''
+function arr(x,n){
+    t=x;
+    t=t+n*4; 
+    return t;
+}
+function main(){
+    a=1;b=2;c=3;d=4;e=5;f=6;g=7; 
+     
+    s=arr(<a,2);
+    s=>s*4;
+    return >s;
+}
+'''  
+demo17 = '''    
+function fib(x){
+    t=3;
+    y=5;
+    z=<y;
+    a=3+>z*5;
+    return a;
+}
+function main(){
+    return fib(100);
+}
+    '''
+demo18='''
+function fun(x,y,z){
+    a=(23+5)*3;
+    b=1;
+    {
+        c=3;
+    }
+}
+function test(d,e,f){ 
+    a=3-fun(3,4,5)*4*2; 
+    { 
+        a=1;
+        b=2;
+    }
+    fun(1,2,b);
+}
+function main(123,"test") { 
+    c=2;
+}
+'''
