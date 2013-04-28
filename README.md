@@ -42,6 +42,7 @@ Example of DraggonEgg(proto version)
 ------------------------------------
 
 1. calculate the fibs~
+
     function tail(n,b1,b2,begin){ 
         if (n == begin){ return b1 + b2;} 
         else { return tail(n, b2, b1 + b2, begin + 1);}
@@ -58,6 +59,7 @@ Example of DraggonEgg(proto version)
     }
 
 2. array with pointer-like processing
+
 	function arr(x,n){
 	    t=x;
 	    t=t+n*4; 
@@ -71,6 +73,7 @@ Example of DraggonEgg(proto version)
 	}
 
 3.swap function
+
 	function swap(a,b){  
 	    t=>a;>a=>b;>b=t;
 	    return 0;
