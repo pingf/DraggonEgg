@@ -41,7 +41,8 @@ the overflow problem.
 Example of DraggonEgg(proto version)
 ------------------------------------
 
-1. calculate the fibs~
+1.calculate the fibs~
+
 
 	function tail(n,b1,b2,begin){ 
 		if (n == begin){ 
@@ -62,7 +63,8 @@ Example of DraggonEgg(proto version)
 		return fib(100);
 	}
 
-2. array with pointer-like processing
+2.array with pointer-like processing
+
 
 	function arr(x,n){
 		t=x;
@@ -77,6 +79,7 @@ Example of DraggonEgg(proto version)
 	}
 
 3.swap function
+
 
 	function swap(a,b){  
 	    t=>a;>a=>b;>b=t;
