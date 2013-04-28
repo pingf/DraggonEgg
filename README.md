@@ -26,7 +26,7 @@ so this compiler(actually the front-end) only contains 850 lines of python.
 Inspired by PLY and mini-c.
 However, the mini-c is a little complex for me,I want to make the compiler much easier.
 so I just use the Visitor Pattern as mini-c used.
-However, I choose the GCC's ARM-v7m assemble language, which is much simpler than x86's.
+I choose the GCC's ARM-v7m assemble language, which is much simpler than x86's.
 designed one simple language called Draggon, now it's much simpler than std C.
 the processes of type checking, error detecting are not included in this demo version for the reason of simplicity.
 
