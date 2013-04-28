@@ -43,33 +43,37 @@ Example of DraggonEgg(proto version)
 
 1. calculate the fibs~
 
-    function tail(n,b1,b2,begin){ 
-        if (n == begin){ return b1 + b2;} 
-        else { return tail(n, b2, b1 + b2, begin + 1);}
-    }
-    function fib(x){
-        if (x>2){
-            return tail(x, 1, 1, 3); 
-        }else{
-            return 1;
-        }
-    }
-    function main(){
-        return fib(100);
-    }
+	function tail(n,b1,b2,begin){ 
+		if (n == begin){ 
+			return b1 + b2;
+		} 
+		else { 
+			return tail(n, b2, b1 + b2, begin + 1);
+		}
+	}
+	function fib(x){
+		if (x>2){
+			return tail(x, 1, 1, 3); 
+		}else{
+			return 1;
+		}
+	}
+	function main(){
+		return fib(100);
+	}
 
 2. array with pointer-like processing
 
 	function arr(x,n){
-	    t=x;
-	    t=t+n*4; 
-	    return t;
+		t=x;
+		t=t+n*4; 
+		return t;
 	}
 	function main(){
-	    a=1;b=2;c=3;d=4;e=5;f=6;g=7;  
-	    s=arr(<a,2);
-	    s=>s*4;
-	    return >s;
+		a=1;b=2;c=3;d=4;e=5;f=6;g=7;  
+		s=arr(<a,2);
+		s=>s*4;
+		return >s;
 	}
 
 3.swap function
