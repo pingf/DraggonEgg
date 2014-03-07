@@ -1,4 +1,4 @@
-DraggonEgg
+DragonEgg
 ==========
 
 License 
@@ -37,7 +37,7 @@ Inspired by PLY and mini-c.
 However, the mini-c is a little complex for me,I want to make the compiler much easier.
 so I just use the Visitor Pattern as mini-c used.
 I choose the GCC's ARM-v7m assemble language, which is much simpler than x86's.
-designed one simple language called Draggon, now it's much simpler than std C.
+designed one simple language called Dragon, now it's much simpler than std C.
 the processes of type checking, error detecting are not included in this demo version for the reason of simplicity.
 
 
@@ -48,7 +48,7 @@ with the help of python, when you test codes with the vm, you can forget about
 the overflow problem.
 
 
-Example of DraggonEgg(proto version)
+Example of DragonEgg(proto version)
 ------------------------------------
 
 1.calculate the fibs~
